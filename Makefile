@@ -256,7 +256,7 @@ gdb_unzip:
 	@if [ ! -f ${GDB}.tar.gz ] && [ ! -f /usr/bin/wget ]; then \
 	  echo /usr/bin/wget is required to download ${GDB}.tar.gz; echo; exit 1; fi
 	@if [ ! -f ${GDB}.tar.gz ] && [ -f /usr/bin/wget ]; then \
-	  wget http://ftp.gnu.org/gnu/gdb/${GDB}.tar.gz; fi
+	  wget https://ftp.uni-bayreuth.de/GNU/gdb/${GDB}.tar.gz; fi
 	@tar --exclude-from gdb.files -xvzmf ${GDB}.tar.gz
 	@make --no-print-directory gdb_patch
 
